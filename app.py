@@ -58,9 +58,14 @@ submit_button = st.button("Submit")
 #     prediction = model.predict(input_data_imputed)
 #     return prediction[0]
 
+imputer = SimpleImputer(strategy='median')
+input_data_imputed = imputer.fit_transform([[reports,age,income,owner,selfemp,dependents,months,majorcards,active]])
+
+# Make prediction with imputed data
+
 # Make a prediction when the submit button is clicked
 if submit_button:
-    prediction = model.predict([[reports,age,income,owner,selfemp,dependents,months,majorcards,active]])
+    prediction = model.predict_proba(input_data_imputed)
     st.header("Prediction:")
     if prediction == 1:
         st.write("You are likely to be approved for a credit card!")
