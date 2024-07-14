@@ -5,4 +5,4 @@
 > ### The app has been deployed using Streamlit Community Cloud.
 https://credit-card-approval-analytics.streamlit.app/
 
-https://github.com/user-attachments/assets/abd84207-dd32-4966-aef8-1c1e77181529
+https://github.com/user-attachments/assets/3dbe9442-1955-4320-aeb3-568837bfea8a
